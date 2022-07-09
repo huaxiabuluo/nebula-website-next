@@ -1,0 +1,95 @@
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.layout {
+  display: flex;
+  flex-direction: row;
+}
+
+.contentLayout {
+  min-width: 840px;
+}
+
+.layoutHeader:global(.ant-layout-header) {
+  background-color: #fff;
+  padding: 0;
+}
+
+.switchVersion {
+  cursor: pointer;
+}
+
+.contentArea {
+  background-color: #fff;
+  padding: 24px;
+  min-height: 360px;
+  position: relative;
+  &.noPadding {
+    padding: 0;
+  }
+  .secretInputArea {
+    margin-top: 24px;
+    .secretAction {
+      margin-top: 12px;
+      text-align: center;
+      & > button:not(:last-child) {
+        margin-right: 12px;
+      }
+    }
+  }
+}
+
+.validityTime {
+  display: block;
+  & > p {
+    margin: 0;
+    line-height: 1;
+    &:not(:last-child) {
+      margin-bottom: 6px;
+    }
+  }
+}
+
+.infoArea {
+  margin-top: 24px;
+  & :global {
+    .ant-card-body {
+      background-color: #fafafa;
+      padding-bottom: 0;
+    }
+  }
+}
+
+.license {
+  .title {
+    color: rgba(0, 0, 0, 0.85);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.4;
+  }
+  .licenseInfo {
+    background: #fafafa;
+    border-radius: 5px;
+    margin-top: 12px;
+    padding: 12px;
+    font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
+      Bitstream Vera Sans Mono, Courier New, monospace;
+  }
+  .infoItem {
+    &:not(:last-child) {
+      margin-bottom: 6px;
+    }
+  }
+}
+
+
+@media (max-width: 600px) {
+  .grid {
+    width: 100%;
+    flex-direction: column;
+  }
+}
