@@ -22,16 +22,12 @@
     "jsx": "preserve",
     "allowSyntheticDefaultImports": true,
     "removeComments": false,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
     "baseUrl": ".",
     "paths": {
-      "#pages/*": [
-        "./pages/*"
-      ],
-      "#styles/*": [
-        "./styles/*"
-      ],
-      "#components/*": [
-        "./components/*"
+      "#src/*": [
+        "src/*"
       ]
     },
     "incremental": true

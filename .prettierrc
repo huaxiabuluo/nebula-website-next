@@ -17,6 +17,10 @@
     {
       "files": ["*.js", ".jsx", ".ts", ".tsx"],
       "options": { "parser": "typescript" }
+    },
+		{
+      "files": ["*.scss", "*.sass", "*.css"],
+      "options": { "parser": "scss" }
     }
 	]
 }

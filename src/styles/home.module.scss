@@ -1,8 +1,8 @@
 .container {
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   height: 100vh;
+  min-height: 100vh;
 }
 
 .layout {
@@ -15,8 +15,8 @@
 }
 
 .layoutHeader:global(.ant-layout-header) {
-  background-color: #fff;
   padding: 0;
+  background-color: #fff;
 }
 
 .switchVersion {
@@ -24,18 +24,22 @@
 }
 
 .contentArea {
-  background-color: #fff;
-  padding: 24px;
-  min-height: 360px;
   position: relative;
+  min-height: 360px;
+  padding: 24px;
+  background-color: #fff;
+
   &.noPadding {
     padding: 0;
   }
+
   .secretInputArea {
     margin-top: 24px;
+
     .secretAction {
       margin-top: 12px;
       text-align: center;
+
       & > button:not(:last-child) {
         margin-right: 12px;
       }
@@ -45,9 +49,11 @@
 
 .validityTime {
   display: block;
+
   & > p {
     margin: 0;
     line-height: 1;
+
     &:not(:last-child) {
       margin-bottom: 6px;
     }
@@ -56,29 +62,32 @@
 
 .infoArea {
   margin-top: 24px;
+
   & :global {
     .ant-card-body {
-      background-color: #fafafa;
       padding-bottom: 0;
+      background-color: #fafafa;
     }
   }
 }
 
 .license {
   .title {
-    color: rgba(0, 0, 0, 0.85);
+    color: rgb(0 0 0 / 85%);
     font-weight: 500;
     font-size: 16px;
     line-height: 1.4;
   }
+
   .licenseInfo {
-    background: #fafafa;
-    border-radius: 5px;
     margin-top: 12px;
     padding: 12px;
-    font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-      Bitstream Vera Sans Mono, Courier New, monospace;
+    font-family: Menlo, Monaco, 'Lucida Console', 'Liberation Mono', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono',
+      'Courier New', monospace;
+    background: #fafafa;
+    border-radius: 5px;
   }
+
   .infoItem {
     &:not(:last-child) {
       margin-bottom: 6px;
@@ -86,10 +95,9 @@
   }
 }
 
-
 @media (max-width: 600px) {
   .grid {
-    width: 100%;
     flex-direction: column;
+    width: 100%;
   }
 }

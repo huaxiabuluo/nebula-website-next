@@ -17,12 +17,11 @@ export function openUrl(url: string) {
   a.click();
 }
 
-export function safeParse<T extends any = unknown>(str: string) {
-  const empty = undefined as undefined;
+export function safeParse<T extends unknown, E = Error>(str: string): [E, undefined] | [undefined, T] {
   try {
-    return [empty, JSON.parse(str) as T] as const;
+    return [undefined, JSON.parse(str) as T];
   } catch (error) {
-    return [error as Error, empty] as const;
+    return [error as E, undefined];
   }
 }
 
